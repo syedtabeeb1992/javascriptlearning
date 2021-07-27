@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
         <script>
+
+            //Example 2
                 let p =  new Promise((resolve, reject) => {
                     let a  = 1+1
                     if (a===2) {
@@ -18,9 +20,7 @@
 
 
 
-                //WITH CALLBACK
-
-
+                //Example 2
                     function watchTutorialPromise() {
                     let userLeft = false
                     let userWatchingCatMeme = false
@@ -40,7 +40,6 @@
                         }
                     })
                     }
-
                     watchTutorialPromise().then(message => {
                     console.log(message)
                     }).catch(error => {
@@ -48,7 +47,10 @@
                     })
 
 
-                    
+
+                  
+                      //Example 3
+
                     const recordVideoOne = new Promise((resolve, reject) => {
                     resolve('Video 1 Recorded')
                     })
@@ -61,6 +63,8 @@
                     resolve('Video 3 Recorded')
                     })
 
+                    //This will run when all the promises are done
+
                     Promise.all([
                     recordVideoOne,
                     recordVideoTwo,
@@ -69,6 +73,8 @@
                     console.log(messages)
                     })
 
+
+                      //This will return as soon as 1st one is completed
                     Promise.race([
                     recordVideoOne,
                     recordVideoTwo,
